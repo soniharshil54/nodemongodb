@@ -25,4 +25,4 @@ let InviteSchema = new Schema({
     }
 })
 
-module.exports =  Invite = mongoose.model("invte", InviteSchema)
+module.exports =  Invite = mongoose.model("invite", InviteSchema)
