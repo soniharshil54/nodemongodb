@@ -11,9 +11,10 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
         .then(conn => console.log("mongodb connected"))
         .catch(err => console.log(err))
 
-let userRoutes = require('./routes/users')
-
+const userRoutes = require('./routes/users')
+const eventRoutes = require('./routes/events')
 
 app.use('/api/user', userRoutes)
+app.use('/api/event', eventRoutes)
 
 app.listen(port, () => console.log(`server started at port ${port}`))
